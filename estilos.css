@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#main-board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 2px;
+  background-color: #333;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cell.disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.board.won {
+  background-color: #d0ffd0;
+}
